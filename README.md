@@ -105,3 +105,35 @@ MaxText aims to provide you with the best OSS models, whether as a reference imp
 ## Get involved
 
 Please join our [Discord Channel](https://discord.com/invite/2H9PhvTcDU) and if you have feedback, you can file a feature request, documentation request, or bug report [here](https://github.com/AI-Hypercomputer/maxtext/issues/new/choose).
+
+## Link Checker
+
+This repository includes a script to check for broken links. To use it, you will need to install the `requests` library:
+
+```bash
+pip install requests
+```
+
+Then, you can run the script from the root of the repository:
+
+```bash
+python3 link_checker.py
+```
+
+The script will scan all text-based files in the repository and generate a report of any broken links in a file named `broken_links_report.md`.
+
+## Link Checker
+
+This repository includes a script to check for broken links. To use it, you will need to install the `requests` library:
+
+```bash
+pip install requests
+```
+
+Then, you can run the script from the root of the repository:
+
+```bash
+python3 link_checker.py
+```
+
+The script will scan all text-based files in the repository and generate a report of any broken links in a file named `broken_links_report.md`.
