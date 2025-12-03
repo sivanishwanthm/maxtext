@@ -1,0 +1,35 @@
+matrix:
+  - name: markdown
+    sources:
+      - "**/*.md"
+    pipeline:
+      - pyspelling.filters.markdown:
+          markdown_extensions:
+            - markdown.extensions.extra
+            - markdown.extensions.smarty
+      - pyspelling.filters.url:
+      - pyspelling.filters.html:
+          comments: false
+          ignores:
+            - "code"
+            - "pre"
+    aspell:
+      lang: en_US
+      wordlists:
+        - .wordlist.txt
+
+  - name: python
+    sources:
+      - "src/**/*.py"
+      - "tests/**/*.py"
+    pipeline:
+      - pyspelling.filters.python:
+          # We only want to check docstrings and comments
+          docstrings: true
+          comments: true
+          strings: false # Don't check python strings
+      - pyspelling.filters.url:
+    aspell:
+      lang: en_US
+      wordlists:
+        - .wordlist.txt
