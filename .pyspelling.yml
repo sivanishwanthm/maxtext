@@ -1,0 +1,20 @@
+matrix:
+  - name: Markdown
+    sources:
+      - '**/*.md'
+    aspell:
+      lang: en
+    dictionary:
+      wordlists:
+        - .wordlist.txt
+      encoding: utf-8
+
+  - name: Python
+    sources:
+      - '**/*.py'
+    aspell:
+      lang: en
+    dictionary:
+      wordlists:
+        - .wordlist.txt
+      encoding: utf-8
